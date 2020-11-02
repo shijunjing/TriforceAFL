@@ -134,7 +134,7 @@ int __clone2(int (*fn)(void *), void *child_stack_base,
 #undef _syscall6
 
 #define _syscall0(type,name)		\
-static type name (void)			\
+type name (void)			\
 {					\
 	return syscall(__NR_##name);	\
 }

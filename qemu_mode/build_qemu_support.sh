@@ -11,7 +11,7 @@ CFLAGS="-O3" ./configure --disable-werror \
   --target-list="x86_64-linux-user x86_64-softmmu arm-softmmu aarch64-softmmu" \
   --iasl=none
 
-make -j 4
+make -j 16 
 cp -f "x86_64-linux-user/qemu-x86_64" "../../afl-qemu-trace"
 cp -f "x86_64-softmmu/qemu-system-x86_64" "../../afl-qemu-system-trace"
 cp -f "x86_64-softmmu/qemu-system-x86_64" "../../qemu-system-x86_64"
